@@ -1,4 +1,4 @@
-name: Sync Notion Tasks with Toggl
+name: Test github scheduling on public repo
 
 on:
   schedule:

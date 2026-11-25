@@ -19,14 +19,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Set up uv
-        uses: astral-sh/setup-uv@v5
-
-      - name: Install dependencies
-        run: uv sync --locked
-
-      - name: Run Notion-Toggl sync script
+      - name: Run test script
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           TOGGL_API_TOKEN: ${{ secrets.TOGGL_API_TOKEN }}
-        run: uv run --locked python test.py
+        run: python test.py
